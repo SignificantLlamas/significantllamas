@@ -3,9 +3,9 @@
     .module('app')
     .controller('MyTableController', MyTableController);
 
-  MyTableController.$inject = ['getTable','tablesService'];
+  MyTableController.$inject = ['$filter', 'getTable','tablesService'];
 
-  function MyTableController(getTable, tablesService) {
+  function MyTableController($filter, getTable, tablesService) {
     var vm = this;
 
     vm.dateTime = getTable.dateTime;
