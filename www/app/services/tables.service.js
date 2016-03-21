@@ -14,7 +14,8 @@
       getRestaurant: getRestaurant,
       getAllEvents: getAllEvents,
       createTable: createTable,
-      getTableData: getTableData
+      getTableData: getTableData,
+      putUserAndEvent: putUserAndEvent
     };
     return service;
 
@@ -73,6 +74,21 @@
         console.error(error.data);
       }
 
+    }
+
+    function putUserAndEvent(userId, eventId) {
+      return $http.put('http://localhost:8080/events/' + eventId, {userId: userId})
+      .then(putUserAndEventCompleted)
+      .catch(putUserAndEventFailed);
+
+      function putUserAndEventCompleted(response) {
+        var eventId = response.data;
+        $state.go('myTable', {eventId: eventId});
+      }
+
+      function putUserAndEventFailed(error) {
+        console.error(error);
+      }
     }
   }
 })();
