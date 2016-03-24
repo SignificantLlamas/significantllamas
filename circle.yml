@@ -1,7 +1,10 @@
+general:
+  build_dir: www
+
 test:
   pre:
     - npm install -g karma
     - npm install -g bower
     - bower install --config.directory=./www/lib
   override:
-    - karma start ./unit-tests.conf.js --single-run
+    - karma start unit-tests.conf.js --single-run
