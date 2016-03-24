@@ -1,5 +1,5 @@
-general:
-  build_dir: www
+# general:
+#   build_dir: www
 
 test:
   pre:
