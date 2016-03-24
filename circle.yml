@@ -5,6 +5,6 @@ test:
   pre:
     - npm install -g karma
     - npm install -g bower
-    - bower install --config.cwd=./angular --config.directory=./www/lib
+    - bower install --config.directory=./www/lib
   override:
-    - karma start ./test/unit-tests.conf.js --single-run
+    - karma start ./tests/unit-tests.conf.js --single-run
