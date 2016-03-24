@@ -1,4 +1,3 @@
-/*eslint disable */
 /*jshint ignore:start*/
 
 // Karma configuration
