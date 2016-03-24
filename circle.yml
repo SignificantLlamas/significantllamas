@@ -1,0 +1,6 @@
+test:
+  pre:
+    - npm install -g bower
+    - bower install --config.directory=./www/lib
+  override:
+    - karma start unit-tests.conf.js --single-run
