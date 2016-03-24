@@ -1,7 +1,5 @@
 test:
   pre:
-    # - npm install
-    # - npm install -g karma
     - npm install -g bower
     - bower install --config.directory=./www/lib
   override:
